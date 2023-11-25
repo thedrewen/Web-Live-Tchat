@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="DDOS" onclick="ddos()">
+    <script>
+        const sock = new WebSocket("wss://thedrewen.com:4026");
+
+        sock.addEventListener("open", () => {
+            console.info("Connection établie !")
+        });
+
+        sock.addEventListener("close", () => {
+            console.info("Deconnexion..")
+        });
+
+        sock.addEventListener("message", (event) => {
+            
+            console.log(event.data);
+
+        });
+
+
+
+        function ddos() {
+
+            
+                setTimeout(() => {
+
+                sock.send(JSON.stringify("wech"))
+                console.log("ddos..");
+
+                }, 100);
+
+                ddos();
+
+        }
+    </script>
+
+</body>
+</html>

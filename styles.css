@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+@font-face {
+	font-family: 'sora';
+	src: url('./assets/Sora-Bold.ttf');
+}
+
+body{
+  font-family: sora;
+  background-color: #5B5575;
+  width: 100%;
+}
+
+div.centered{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+h1{
+  font-family: sora;
+  margin: 5px;
+  color: white;
+}
+
+.msgs {
+  padding: 5px;
+  width: 650px;
+  height: 550px;
+  text-align: left;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  
+}
+
+.msgs div{
+  max-width: 650px;
+  overflow: hidden;
+  word-wrap: normal;
+  
+}
+.msgs div p{
+  width: 650px;
+}
+input, textarea {
+  border: none;
+  background-color: #3E3B47;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+  vertical-align: top;
+  display: inline;
+}
+textarea#msgs_input {
+  height: 16px;
+  resize: none;
+  width: calc(100% - 70px);
+}
+.content .form{
+  position: relative;
+  width: 100%;
+}
+.content input{
+  position: relative;
+  width: 50px;
+}
+
+div.msgs div p{
+  
+  width: 100%;
+  
+}
+
+div#online_user{
+  
+  position: relative;
+  right: -1px;
+  display: inline-block;
+  color: white;
+  background: #443651;
+  padding: 6px;
+  border-radius: 10px;
+  
+}
+#users{
+  overflow: auto;
+}
+#online_user .form{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: block;
+  text-align: center;
+}
+.bas {
+  bottom: 0;
+}
+.haut {
+    bottom: 80px;
+}
+#online_user input{
+  width: 75%;
+  margin: 5px;
+  background-color: #170528;
+}
+
+div.menu {
+  display: none;
+}
+
+p.warn{
+  color: red;
+  background-color: #BFBFBF;
+}
+p.info{
+  color: blue;
+  background-color: #BFBFBF;
+}
+
+
+@media (max-width: 1000px){ 
+  div.menu {
+    
+    position: absolute;
+    display: flex;
+    top: -10px;
+    right: 0;
+    
+  }
+  div.menu svg{
+    width: 100px;
+    z-index: 999;
+    right: 0;
+    cursor: pointer;
+  }
+  div.form {
+    position: relative;
+    width: 100%;
+  }
+  
+  .content input{
+    width: 40px;
+  }
+  
+  div.centered {
+  
+    top: 25px;
+    position: relative;
+    justify-content: center;
+    width: 98%;
+    
+  }
+  div.content {
+    
+    width: 90%;
+    
+  }
+  div.msgs{
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+  div#online_user {
+    position: absolute;
+    top: 3px;
+    height: 500px;
+    width: 90%;
+    transition: 1s;
+    right: calc((100% + 550px));
+  }
+  textarea#msgs_input{
+    width: calc(100% - 60px);
+  }
+}
+
+

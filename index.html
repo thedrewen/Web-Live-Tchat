@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreWen Tchat</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>
+        DrewTchat
+    </h1>
+    <div class="menu" id="menu">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+    </div>
+    <div class="centered">
+        <div class="content">
+            <div class="msgs" id="msgs">
+            </div>
+            <div class="form">
+                <textarea type="text" name="msgs" id="msgs_input" placeholder="Envoyer un message"></textarea>
+                <input type="button" value="Send" id="submit"><br>
+            </div>
+        </div>
+    
+        <div id="online_user">
+            <h2 style="text-decoration: underline;">
+                Utilisateur online :
+            </h2>
+            <div id="users">
+                <div class="user" style="color: red;">
+                    System
+                </div>
+            </div>
+            <div class="form haut">
+                <input type="text" id="change_channel" placeholder="Public"><br>
+                <input type="button" value="Rejoindre" id="submit_channel">
+            </div>    
+            <div class="form bas">
+                <input type="text" id="change_pseudo"><br>
+                <input type="button" value="Modifier Pseudo" id="submit_pseudo">
+            </div>            
+        </div>
+    </div>
+
+    <script src="client/index.js"></script>
+    <script src="client/menu.js"></script>
+</body>
+</html>
+
